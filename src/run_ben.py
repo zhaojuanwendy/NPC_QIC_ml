@@ -33,17 +33,17 @@ RESUlT_PATH = '../result'
 models, params
 """
 models = [
-    # (LogisticRegression(C=2, random_state=1234), 'lr'),
-    # (ensemble.RandomForestClassifier(n_estimators=100, random_state=1234), 'rf'),
-    # (XGBClassifier(learning_rate=0.005,
-    #                objective='binary:logistic',
-    #                # tree_method='gpu_hist', nthread=-1
-    #                min_child_weight=5,
-    #                gamma=2,
-    #                subsample=0.6,
-    #                colsample_bytree=0.4,
-    #                max_depth=6,
-    #                random_state=1234, eval_metric="auc"), 'xgb' ),
+    (LogisticRegression(C=2, random_state=1234), 'lr'),
+    (ensemble.RandomForestClassifier(n_estimators=100, random_state=1234), 'rf'),
+    (XGBClassifier(learning_rate=0.005,
+                   objective='binary:logistic',
+                   # tree_method='gpu_hist', nthread=-1
+                   min_child_weight=5,
+                   gamma=2,
+                   subsample=0.6,
+                   colsample_bytree=0.4,
+                   max_depth=6,
+                   random_state=1234, eval_metric="auc"), 'xgb' ),
 
     (LGBMClassifier(max_bin=512,
                     learning_rate=0.005,
